@@ -1,0 +1,120 @@
+---
+title: Offline app distribution
+description: Install and share AnonChatX without app stores using local, offline connections.
+---
+
+AnonChatX is designed to be installable **without relying on centralized app stores**.  
+In environments where internet access is unavailable, monitored, restricted, or unsafe,
+the app can be shared directly between devices using local connections.
+
+This is not a convenience feature — it is a survival feature.
+
+---
+
+## Why offline distribution exists
+
+Centralized app stores introduce dependencies that are incompatible with high-risk environments:
+
+- Persistent **accounts and identifiers**
+- Network visibility into **when and where** software is installed
+- The ability to **block, censor, or revoke access**
+- Forced updates and remote removals
+
+In many real-world situations, the safest way to install software is **device-to-device**,
+without contacting any external infrastructure.
+
+AnonChatX supports this by design.
+
+---
+
+## How offline distribution works
+
+Offline distribution uses **local-only connectivity** between nearby devices.
+
+At a high level:
+
+1. **A trusted device initiates sharing**  
+   One Android device starts offline sharing from within AnonChatX.
+
+2. **A local network is created**  
+   The device exposes a temporary local connection (for example, via a Wi-Fi hotspot).
+   No internet access is required.
+
+3. **A minimal local download page is served**  
+   The sharing device provides a simple internal download page,
+   accessible only to devices connected to the local network.
+
+4. **Nearby devices install directly**  
+   Other devices connect locally and download app packages directly
+   from the sharing device — without app stores, accounts, or external traffic.
+
+No data leaves the local network.  
+No third-party services are contacted.
+
+---
+
+## App catalog (offline kit)
+
+Offline distribution is not limited to AnonChatX alone.
+
+The local download page can present a **curated app catalog**, allowing a complete
+privacy-focused toolkit to be shared in one step.
+
+The catalog may include:
+
+- **AnonChatX** — the main messaging application  
+- **AnonChatX Mailbox** — companion mailbox functionality  
+- **Monerujo** — Monero wallet for private payments  
+- **Tor Browser** — anonymous web access  
+- **Orbot** — system-wide Tor routing (VPN-style)  
+- **Ripple** — panic trigger and emergency signaling app  
+
+This allows devices to be prepared **offline and in advance**, reducing the need
+for risky internet downloads later.
+
+---
+
+## When offline distribution matters
+
+Offline distribution is especially relevant when:
+
+- Internet access is unavailable or unreliable
+- Networks are monitored, filtered, or hostile
+- Installing from app stores would create risk
+- Devices must be prepared ahead of time
+- Software must be shared discreetly between people
+
+Typical scenarios include protests, border crossings, power outages,
+isolated locations, or environments under heavy surveillance.
+
+---
+
+## Integrity and trust
+
+Offline distribution reduces exposure, but **trust still matters**.
+
+Only install apps from people you trust.  
+Whenever possible, verify signatures and checksums before installation.
+
+Offline does not automatically mean safe — it means **controlled**.
+
+---
+
+## What this feature does *not* do
+
+Offline distribution does **not**:
+
+- Hide the presence of apps from device inspection
+- Replace operational security practices
+- Guarantee anonymity on its own
+
+It removes a critical dependency — centralized distribution —
+but must be used as part of a broader threat-aware workflow.
+
+---
+
+## Related documentation
+
+- [Real-world usage scenarios and transport tradeoffs](/docs/usage/scenarios)
+- [Operational security basics](/docs/usage/opsec)
+- [Threat model and design assumptions](/docs/security/threat-model)

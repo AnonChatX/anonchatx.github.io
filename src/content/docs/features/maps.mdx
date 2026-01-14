@@ -1,0 +1,98 @@
+---
+title: Offline maps
+description: Share locations and navigate without contacting external map servers.
+---
+
+Offline Maps allow AnonChatX to work with **location data without leaking metadata to third-party map providers**.
+
+Instead of querying online map services, AnonChatX can use **locally stored map tiles**, keeping map usage fully offline and under your control.
+
+---
+
+## Why offline maps matter
+
+Online maps leak more than just coordinates.
+
+Every map request can reveal:
+- Where you are
+- When you are there
+- What locations you search for
+- Which device is making the request
+
+Offline Maps remove that entire class of exposure by **never contacting external map servers**.
+
+---
+
+## What Offline Maps enable
+
+With Offline Maps, you can:
+
+- Share locations without internet access
+- View and reference maps during internet shutdowns
+- Navigate in high-risk environments without network traffic
+- Reduce metadata exposure during normal use
+
+Offline Maps work in:
+- One-to-one conversations
+- Location sharing workflows
+- Fully offline coordination scenarios
+
+---
+
+## Map tiles and data packs
+
+Offline Maps are based on **pre-downloaded map tiles**, typically distributed as packaged archives.
+
+These map packs are:
+- Stored locally on your device
+- Loaded directly by AnonChatX
+- Never fetched dynamically at runtime
+
+This design ensures predictable behavior and avoids surprise network access.
+
+---
+
+## Importing offline map data
+
+Users can import map data manually, for example:
+- From a ZIP archive
+- From removable storage
+- From a trusted offline transfer
+
+Once imported:
+- Maps appear in the Offline Maps list
+- No further downloads are required
+- AnonChatX will use them automatically when sharing or viewing locations
+
+---
+
+## Safety and trust considerations
+
+Offline maps shift trust from *servers* to *sources*.
+
+Before importing map data:
+- Use only sources you trust
+- Prefer map packs with published checksums or signatures
+- Avoid running unknown map archives on desktop systems with elevated privileges
+
+Treat map data like any other sensitive dependency.
+
+---
+
+## Limitations and expectations
+
+Offline Maps:
+- Do not provide live traffic or routing updates
+- Require manual updates when map data becomes outdated
+- Are only as accurate as the data you import
+
+They trade convenience for **predictability and safety**.
+
+---
+
+## Related documentation
+
+- **[Offline Maps settings](/docs/usage/settings/offline-maps)**
+- **[Sharing locations](/docs/usage/messaging)**
+- **[Operational security basics](/docs/usage/opsec)**
+- **[Offline distribution](/docs/features/distribution)**
