@@ -962,28 +962,49 @@ import NavBar from "../components/NavBar.astro";
 </section>
 
     <footer class="mt-16 border-t border-white/10 pt-10 text-sm text-zinc-500">
-      <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-        <span>
-          © {new Date().getFullYear()} AnonChatX • No trackers • No analytics • No cookies •
-          Served statically via GitHub Pages
-        </span>
-<span class="flex items-center gap-4">
-  <a
-    class="text-zinc-300 hover:text-white"
-    href="/onion.html"
-  >
-    Onion
-  </a>
+      <div class="mx-auto max-w-6xl px-6">
+        <!-- Row 1: URLs -->
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <div class="text-xs font-semibold tracking-wide text-zinc-300">
+              Onion Website
+            </div>
+            <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
+              http://ucvmhctoq76k6qrdrvblxspjpk5rpjutsfe6nxyhgmvx25vruohxrnqd.onion/
+            </div>
+          </div>
 
-  <a
-    class="text-zinc-300 hover:text-white"
-    href="https://github.com/anonchatx"
-    target="_blank"
-    rel="noreferrer"
-  >
-    GitHub
-  </a>
-</span>
+          <div>
+            <div class="text-xs font-semibold tracking-wide text-zinc-300">
+              Onion Code Repo
+            </div>
+            <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
+              http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/
+            </div>
+          </div>
+
+          <div>
+            <div class="text-xs font-semibold tracking-wide text-zinc-300">
+              ClearNet Website
+            </div>
+            <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
+              https://anonchatx.org
+            </div>
+          </div>
+
+          <div>
+            <div class="text-xs font-semibold tracking-wide text-zinc-300">
+              ClearNet Repo
+            </div>
+            <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
+              https://github.com/AnonChatX/anonchatx-android
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 border-t border-white/10 pt-4 text-zinc-500">
+          © {new Date().getFullYear()} AnonChatX • No trackers • No analytics • No cookies
+        </div>
       </div>
     </footer>
   </main>
