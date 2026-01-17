@@ -5,39 +5,84 @@ import NavBar from "../components/NavBar.astro";
 
 <Layout
   title="AnonChatX"
-  description="Decentralized messaging for high-threat environments. Online over Tor or fully offline."
->
+  description="Decentralized messaging for high-threat environments. Online over Tor or fully offline.">
+
   <NavBar />
   
-<!-- ANTI-FASCIST STATEMENT -->
-<section
-  id="statement"
-  class="relative flex min-h-screen items-center justify-center px-6"
->
-  <!-- Background -->
-  <div class="pointer-events-none absolute inset-0 -z-10">
-    <div class="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.16),transparent_65%)]"></div>
-  </div>
+  <!-- ANTI-FASCIST STATEMENT -->
+  <section
+    id="statement"
+    class="relative flex min-h-screen items-center justify-center px-6">
+    
+    <!-- Background -->
+    <div class="pointer-events-none absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.16),transparent_65%)]"></div>
+    </div>
 
-  <div class="mx-auto max-w-5xl text-center">
-    <h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
-      <span class="block">
-        ANTI <span class="text-red-500">FASCIST</span> BY DESIGN.
-      </span>
-      <span class="block text-zinc-100">
-        Incompatible with <span class="text-red-500">authoritarian</span> regimes
-      </span>
-    </h1>
+    <div class="mx-auto max-w-5xl text-center">
+      <h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
+        <span class="block">
+          ANTI <span class="text-red-500">FASCIST</span> BY DESIGN.
+        </span>
+        <span class="block text-zinc-100">
+          Incompatible with <span class="text-red-500">authoritarian</span> regimes
+        </span>
+      </h1>
 
-    <p class="mx-auto mt-8 max-w-3xl text-base text-zinc-300 sm:text-lg">
-      <span class="text-red-500">Fascism</span> survives through surveillance,
-      centralization, and fear. AnonChatX removes those levers — no servers to seize,
-      no metadata to harvest, and no infrastructure that can be flipped into a tool
-      of repression.
-    </p>
-  </div>
-</section>
+      <p class="mx-auto mt-8 max-w-3xl text-base text-zinc-300 sm:text-lg">
+        <span class="text-red-500">Fascism</span> survives through surveillance,
+        centralization, and fear. AnonChatX removes those levers — no servers to seize,
+        no metadata to harvest, and no infrastructure that can be flipped into a tool
+        of repression.
+      </p>
+    </div>
+  </section>
+
+  <!-- OFFICIAL ACCESS POINTS -->
+  <section class="border-t border-white/10 bg-black/20">
+    <div class="mx-auto max-w-6xl px-6 py-10">
+
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-left">
+        <div>
+          <div class="text-xs font-semibold tracking-wide text-zinc-300">
+            Onion Website
+          </div>
+          <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
+            http://ucvmhctoq76k6qrdrvblxspjpk5rpjutsfe6nxyhgmvx25vruohxrnqd.onion/
+          </div>
+        </div>
+
+        <div>
+          <div class="text-xs font-semibold tracking-wide text-zinc-300">
+            Onion Code Repo
+          </div>
+          <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
+            http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX/anonchatx-android
+          </div>
+        </div>
+
+        <div>
+          <div class="text-xs font-semibold tracking-wide text-zinc-300">
+            ClearNet Website
+          </div>
+          <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
+            https://anonchatx.org
+          </div>
+        </div>
+
+        <div>
+          <div class="text-xs font-semibold tracking-wide text-zinc-300">
+            ClearNet Repo (GitHub)
+          </div>
+          <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
+            https://github.com/AnonChatX/anonchatx-android
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <main class="mx-auto max-w-6xl px-6 py-16">
     <!-- HERO -->
     <section class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 sm:p-12">

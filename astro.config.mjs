@@ -35,6 +35,7 @@ export default defineConfig({
             { label: "What is AnonChatX?", link: "/docs/" },
             { label: "Manifesto", link: "/docs/manifesto" },
             { label: "Threat model", link: "/docs/security/threat-model" },
+            { label: "Onion Services", link: "/docs/onion-services" },
           ],
         },
 
