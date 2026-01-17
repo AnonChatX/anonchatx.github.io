@@ -576,24 +576,24 @@ import NavBar from "../components/NavBar.astro";
         app stores by design.
       </p>
         <div class="mt-10 max-w-3xl">
-    <div class="text-base font-semibold">About iOS support</div>
-    <p class="mt-2 text-sm text-zinc-400">
-      AnonChatX is Android-only. iOS imposes architectural and policy constraints that
-      prevent providing the level of privacy, network control, and offline operation
-      required by AnonChatX’s threat model. Supporting iOS would mean compromising on
-      guarantees this project is not willing to weaken.
-    </p>
+          <div class="text-base font-semibold">About iOS support</div>
+          <p class="mt-2 text-sm text-zinc-400">
+            AnonChatX is Android-only. iOS imposes architectural and policy constraints that
+            prevent providing the level of privacy, network control, and offline operation
+            required by AnonChatX’s threat model. Supporting iOS would mean compromising on
+            guarantees this project is not willing to weaken.
+          </p>
 
-    <div class="mt-3">
-      <a
-        href="/docs/ios"
-        class="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 hover:text-white"
-      >
-        Read why AnonChatX will never support iOS
-        <span aria-hidden="true">→</span>
-      </a>
-    </div>
-  </div>
+          <div class="mt-3">
+            <a
+              href="/docs/ios"
+              class="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 hover:text-white"
+            >
+              Read why AnonChatX will never support iOS
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
     </section>
 
     <!-- OPEN -->
@@ -630,27 +630,15 @@ import NavBar from "../components/NavBar.astro";
       <!-- Onion repository -->
       <div class="mt-16">
         <div class="flex items-center gap-3">
-          <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5">
-            <svg
-              class="h-5 w-5 text-zinc-300"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 4.5c-4.142 0-7.5 3.358-7.5 7.5S7.858 19.5 12 19.5s7.5-3.358 7.5-7.5S16.142 4.5 12 4.5z"
-              />
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 8.25v3.75l2.25 2.25"
-              />
-            </svg>
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-purple-500/30 bg-purple-500/10">
+            <img
+              src="/icons/tor.svg"
+              alt="Tor"
+              class="h-5 w-5 text-purple-400"
+              style="filter: brightness(0) saturate(100%) invert(38%) sepia(74%) saturate(561%) hue-rotate(240deg);"
+            />
           </div>
+
           <h3 class="text-2xl font-semibold tracking-tight">Onion repository</h3>
         </div>
 
@@ -664,7 +652,6 @@ import NavBar from "../components/NavBar.astro";
           If you can reach Tor, you can audit the code — no accounts, no permissions,
           no gatekeepers.
         </p>
-
       </div>
 
       <div class="mt-8">
