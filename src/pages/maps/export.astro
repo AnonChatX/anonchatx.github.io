@@ -15,44 +15,40 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
 
   <NavBar />
 
-  <main class="mx-auto max-w-6xl px-6 py-16">
-    <section class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 sm:p-12">
-      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white/10 via-transparent to-transparent"></div>
+    <main class="mx-auto max-w-6xl px-6 py-16">
+    <!-- HERO / INTRO BOX -->
+    <section class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-12">
+        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white/10 via-transparent to-transparent"></div>
 
-      <div class="max-w-3xl">
+        <div class="max-w-3xl">
         <p class="text-xs font-semibold tracking-widest text-zinc-400">
-          OFFLINE MAPS • LOCAL EXPORT • NO SERVER WORK
+            OFFLINE MAPS • LOCAL EXPORT • NO SERVER WORK
         </p>
 
         <h1 class="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl">
-          Maps Exporter (beta)
+            Maps Exporter (beta)
         </h1>
 
         <p class="mt-4 text-zinc-300">
-          Select an area, pick zoom levels, and export a tile pack locally. No uploads. No accounts.
+            Select an area, pick zoom levels, and export a tile pack locally. No uploads. No accounts.
         </p>
 
         <p class="mt-4 text-zinc-300">
-        ⓘ Before using this tool, read about
-        <a
+            ⓘ Before using this tool, read about
+            <a
             href="#maps-exporter-disclaimer"
-            class="font-medium font-semibold text-zinc-100 hover:text-white"
-        >
+            class="font-semibold text-zinc-100 hover:text-white"
+            >
             transparency & network behavior
-        </a>.
+            </a>.
         </p>
-
-
-      </div>
-
-
-
-        
-      <div class="mt-10">
-        <MapsExporterApp client:only="react" />
-
-      </div>
+        </div>
     </section>
+
+    <div class="mt-8 sm:mt-12">
+        <MapsExporterApp client:only="react" />
+    </div>
+
     <!-- Maps Exporter disclaimer -->
     <div
     id="maps-exporter-disclaimer"
