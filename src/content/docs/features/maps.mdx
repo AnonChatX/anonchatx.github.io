@@ -19,7 +19,32 @@ Every map request can reveal:
 - What locations you search for
 - Which device is making the request
 
-Offline Maps remove that entire class of exposure by **never contacting external map servers**.
+Offline Maps remove that entire class of exposure by **not contacting external map servers** during map viewing.
+
+---
+
+## Threat model: GPS and phone location services
+
+AnonChatX does **not** need GPS to share locations that you *receive* from other people.
+
+In higher-risk workflows, AnonChatX is designed so it can operate **without requesting Android Location permissions**. This matters because once Location Services are enabled and granted to apps, you expand the number of places where location metadata can be created (OS logs, app caches, history, and more).
+
+### Offline navigation workflow
+
+(recommended for high-risk use)
+
+If you want “navigate from a received location” while minimizing exposure:
+
+1. Keep Android Location Services **disabled** when possible.
+2. Use Offline Maps for viewing the area **without online tile requests**.
+3. When you need navigation, pass the received coordinates to an **offline / standalone navigation tool** (or a dedicated device) that can operate without network access.
+
+This workflow helps ensure:
+- AnonChatX does not trigger online map calls
+- AnonChatX does not request GPS permissions
+- Navigation can be performed without relying on online services
+
+> Important: disabling GPS/Location in AnonChatX reduces what **AnonChatX** can access, but it cannot guarantee the OS or other apps won’t create location-related metadata. For best results, keep Android Location off and use offline-only navigation tools.
 
 ---
 
@@ -29,7 +54,7 @@ With Offline Maps, you can:
 
 - Share locations without internet access
 - View and reference maps during internet shutdowns
-- Navigate in high-risk environments without network traffic
+- Navigate in high-risk environments with reduced network traffic
 - Reduce metadata exposure during normal use
 
 Offline Maps work in:
@@ -46,9 +71,23 @@ Offline Maps are based on **pre-downloaded map tiles**, typically distributed as
 These map packs are:
 - Stored locally on your device
 - Loaded directly by AnonChatX
-- Never fetched dynamically at runtime
+- Never fetched dynamically at runtime (once imported)
 
 This design ensures predictable behavior and avoids surprise network access.
+
+---
+
+## Creating map packs (Maps Exporter)
+
+AnonChatX provides a companion tool: **Maps Exporter (beta)**.
+
+It runs entirely in your browser and lets you:
+- Choose a tile source
+- Select an area and zoom range
+- Export a ZIP pack in the format AnonChatX expects
+
+Open it here:
+- **[Maps Exporter](/maps/export/)**
 
 ---
 
@@ -92,6 +131,7 @@ They trade convenience for **predictability and safety**.
 
 ## Related documentation
 
+- **[Maps Exporter](/docs/features/maps-exporter)**
 - **[Offline Maps settings](/docs/usage/settings/offline-maps)**
 - **[Sharing locations](/docs/usage/messaging)**
 - **[Operational security basics](/docs/usage/opsec)**
