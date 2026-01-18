@@ -403,7 +403,39 @@ import NavBar from "../components/NavBar.astro";
                 <p class="mt-1 text-sm text-zinc-400">Tile packs can be shared via trusted sources (onion/community mirrors).</p>
               </div>
             </div>
-                        <div class="mt-8">
+
+            <!-- Maps Exporter callout -->
+            <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div class="max-w-xl">
+                  <div class="text-sm font-semibold text-zinc-200">Maps Exporter</div>
+                  <p class="mt-1 text-sm text-zinc-400">
+                    Generate offline tile packs locally in your browser.
+                    Tile sources are only contacted after explicit user selection.
+                  </p>
+                </div>
+
+                <a
+                  href="/maps/export"
+                  class="inline-flex items-center justify-center rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-zinc-200 ring-1 ring-white/10 hover:bg-white/15"
+                >
+                  Open Maps Exporter →
+                </a>
+              </div>
+
+              <!-- Docs link (same style as other section) -->
+              <div class="mt-4">
+                <a
+                  href="/docs/maps-exporter"
+                  class="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 hover:text-white"
+                >
+                  Learn how offline tile exports work
+                  <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">→</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="mt-8">
               <a
                 href="/docs/features/maps"
                 class="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 hover:text-white"

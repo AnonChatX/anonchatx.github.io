@@ -1,0 +1,117 @@
+---
+title: Maps Exporter (beta)
+description: Export offline map tiles locally in your browser.
+---
+
+## Overview
+
+Maps Exporter allows you to generate offline map tile packs
+**without any server involvement**, all code runs in client-side.
+
+Everything happens locally:
+selection, downloading, packaging, and saving.
+
+---
+
+## How it works
+
+1. Choose a map tile source  
+2. Move and zoom the map to define the export area  
+3. Select zoom detail level (or custom range)  
+4. Export tiles as a ZIP file  
+
+The visible map area is the export boundary.
+
+---
+
+## Map Sources
+
+No map tiles are loaded until you explicitly select a source.
+
+Available presets:
+- OpenStreetMap (standard)
+- CARTO Dark Matter (dark)
+
+You may also provide a custom tile URL.
+
+Example:
+
+```
+https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+```
+
+---
+
+## Zoom Levels
+
+### Presets
+- **Low**: zoom 0 → 8
+- **Medium**: zoom 0 → 12
+- **High**: zoom 0 → 16
+
+### Advanced
+Enable *Advanced* to set exact zoom ranges.
+
+> Higher zooms increase file size dramatically.
+
+---
+
+## Export Controls
+
+During export you can:
+- Pause / resume
+- Stop and pack what’s already downloaded
+- Cancel entirely
+
+Progress includes:
+- Percentage
+- Tile count
+- Downloaded size
+- Runtime
+
+---
+
+## Output Format
+
+ZIP structure:
+
+```
+AnonMapsCache/
+├── z/x/y.png
+└── export.amd
+```
+
+
+The metadata file includes:
+- Bounding box
+- Zoom levels
+- Tile source
+- Timestamp
+
+---
+
+## Privacy Model
+
+- No analytics
+- No background requests
+- No uploads
+- No persistent identifiers
+
+This tool is safe to use on untrusted networks.
+
+---
+
+## Notes on Tile Usage
+
+Public tile servers are for **light use only**.
+For large areas or high zooms:
+
+- Run your own tile server
+- Use a provider with an API key
+- Respect provider rate limits
+
+---
+
+## License
+
+Maps Exporter is released under **GNU GPL v3 or later**.

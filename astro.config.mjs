@@ -1,14 +1,17 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import starlight from "@astrojs/starlight";
+import react from "@astrojs/react";
 
 export default defineConfig({
   site: "https://anonchatx.org",
-  
+
   vite: {
     plugins: [tailwindcss()],
   },
+
   integrations: [
+    react(),
     starlight({
       title: "AnonChatX Docs",
       logo: {
@@ -36,9 +39,9 @@ export default defineConfig({
             { label: "Manifesto", link: "/docs/manifesto" },
             { label: "Threat model", link: "/docs/security/threat-model" },
             { label: "Onion Services", link: "/docs/onion-services" },
+            { label: "Maps Exporter", link: "/docs/maps-exporter" },
           ],
         },
-
         {
           label: "Features",
           items: [
@@ -51,7 +54,6 @@ export default defineConfig({
             { label: "Panic button + panic contacts", link: "/docs/features/panic" },
           ],
         },
-
         {
           label: "Using AnonChatX",
           items: [
@@ -64,10 +66,8 @@ export default defineConfig({
             { label: "Private Groups", link: "/docs/usage/private-groups" },
             { label: "Public Groups", link: "/docs/usage/public-groups" },
             { label: "Deleting Contacts", link: "/docs/usage/deleting-contacts" },
-
             { label: "Operational security basics", link: "/docs/usage/opsec" },
             { label: "Scenarios and tradeoffs", link: "/docs/usage/scenarios" },
-
             {
               label: "Settings",
               items: [
@@ -82,11 +82,9 @@ export default defineConfig({
                 { label: "Share this app offline", link: "/docs/usage/settings/share-offline" },
               ],
             },
-
             { label: "FAQ", link: "/docs/faq" },
           ],
         },
-
         {
           label: "Get it",
           items: [
@@ -94,7 +92,6 @@ export default defineConfig({
             { label: "Verify downloads", link: "/docs/verify" },
           ],
         },
-
         {
           label: "Project",
           items: [
