@@ -501,7 +501,7 @@ function cancelExport() {
         <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 p-4">
         <div className="text-sm font-semibold text-zinc-200">Map source</div>
 
-        ß<p className="mt-3 text-xs text-zinc-500">
+        <p className="mt-3 text-xs text-zinc-500">
             No map network requests are made until you choose a source.
         </p>
 
