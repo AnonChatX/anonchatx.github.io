@@ -66,10 +66,10 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
 
         <div>
           <div class="text-xs font-semibold tracking-wide text-zinc-300">
-            Onion Code Repo
+            Onion Code Repository
           </div>
           <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
-            http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX/anonchatx-android
+            http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX (mirror)
           </div>
         </div>
 
@@ -80,14 +80,20 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
           <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
             https://anonchatx.org
           </div>
+          <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
+            https://anonchatx.github.io
+          </div>
         </div>
 
         <div>
           <div class="text-xs font-semibold tracking-wide text-zinc-300">
-            ClearNet Repo (GitHub)
+            ClearNet Code Repository
           </div>
           <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
-            https://github.com/AnonChatX/anonchatx-android
+            https://github.com/AnonChatX
+          </div>
+          <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
+            https://codeberg.org/AnonChatX (mirror)
           </div>
         </div>
       </div>
@@ -620,7 +626,7 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
           <div class="mt-6">
             <a
               id="latest-release-link"
-              href="http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX/anonchatx-android/releases/latest"
+              href="http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX/releases/latest"
               target="_blank"
               rel="noreferrer"
               class="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 text-sm font-medium ring-1 ring-white/10 hover:bg-white/15"
@@ -746,7 +752,7 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
       <div class="mt-8">
         <a
           id="explore-code-link"
-          href="http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX/anonchatx-android"
+          href="http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX"
           target="_blank"
           rel="noreferrer"
           class="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 hover:text-white"
@@ -1077,7 +1083,7 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
           const releaseLink = document.getElementById("latest-release-link");
           const releaseText = document.getElementById("latest-release-text");
           if (releaseLink && releaseText && !isOnion) {
-            releaseLink.href = "https://github.com/AnonChatX/anonchatx-android/releases/latest";
+            releaseLink.href = "https://github.com/AnonChatX/releases/latest";
             releaseText.textContent = "Go to GitHub latest release";
           }
 
@@ -1085,7 +1091,7 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
           const exploreLink = document.getElementById("explore-code-link");
           const exploreText = document.getElementById("explore-code-text");
           if (exploreLink && exploreText && !isOnion) {
-            exploreLink.href = "https://github.com/AnonChatX/anonchatx-android";
+            exploreLink.href = "https://github.com/AnonChatX";
             exploreText.textContent = "Explore the code on GitHub";
           }
 
@@ -1093,7 +1099,7 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
           const contributeLink = document.getElementById("contribute-link");
           const contributeText = document.getElementById("contribute-text");
           if (contributeLink && contributeText && !isOnion) {
-            contributeLink.href = "https://github.com/AnonChatX/anonchatx-android";
+            contributeLink.href = "https://github.com/AnonChatX";
             contributeText.textContent = "Contribute on GitHub";
           }
         } catch (e) {
@@ -1105,7 +1111,7 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
       <div class="mt-8 flex flex-wrap items-center gap-6">
         <a
           id="contribute-link"
-          href="http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX/anonchatx-android"
+          href="http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX"
           target="_blank"
           rel="noreferrer"
           class="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 hover:text-white"
@@ -1137,10 +1143,10 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
 
           <div>
             <div class="text-xs font-semibold tracking-wide text-zinc-300">
-              Onion Code Repo
+              Onion Code Repository
             </div>
             <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
-              http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX/anonchatx-android
+              http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX (mirror)
             </div>
           </div>
 
@@ -1151,14 +1157,20 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
             <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
               https://anonchatx.org
             </div>
+            <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
+              https://anonchatx.github.io
+            </div>
           </div>
 
           <div>
             <div class="text-xs font-semibold tracking-wide text-zinc-300">
-              ClearNet Repo (GitHub)
+              ClearNet Code Repository
             </div>
             <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
-              https://github.com/AnonChatX/anonchatx-android
+              https://github.com/AnonChatX
+            </div>
+            <div class="mt-1 font-mono text-[11px] text-zinc-400 break-all">
+              https://codeberg.org/AnonChatX (mirror)
             </div>
           </div>
         </div>
