@@ -626,7 +626,7 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
           <div class="mt-6">
             <a
               id="latest-release-link"
-              href="http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX/releases/latest"
+              href="http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX/anonchatx-android/releases/latest"
               target="_blank"
               rel="noreferrer"
               class="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 text-sm font-medium ring-1 ring-white/10 hover:bg-white/15"
@@ -1083,7 +1083,7 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
           const releaseLink = document.getElementById("latest-release-link");
           const releaseText = document.getElementById("latest-release-text");
           if (releaseLink && releaseText && !isOnion) {
-            releaseLink.href = "https://github.com/AnonChatX/releases/latest";
+            releaseLink.href = "https://github.com/AnonChatX/anonchatx-android/releases/latest";
             releaseText.textContent = "Go to GitHub latest release";
           }
 
