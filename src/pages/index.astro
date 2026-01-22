@@ -619,12 +619,13 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
 
           <div class="mt-6">
             <a
-              href="https://github.com/AnonChatX/anonchatx-android/releases/latest"
+              id="latest-release-link"
+              href="http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX/anonchatx-android/releases/latest"
               target="_blank"
               rel="noreferrer"
               class="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 text-sm font-medium ring-1 ring-white/10 hover:bg-white/15"
             >
-              Check the latest release
+              <span id="latest-release-text">Check the latest release</span>
               <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -744,12 +745,13 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
 
       <div class="mt-8">
         <a
-          href="https://github.com/AnonChatX/anonchatx-android"
+          id="explore-code-link"
+          href="http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX/anonchatx-android"
           target="_blank"
           rel="noreferrer"
           class="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 hover:text-white"
         >
-          Explore the code on GitHub or the Onion repo <span aria-hidden="true">→</span>
+          <span id="explore-code-text">Explore the code in our repo (onion)</span> <span aria-hidden="true">→</span>
         </a>
       </div>
     </section>
@@ -1065,14 +1067,50 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
         }
       </script>
 
+      <!-- Dynamic link text based on clearnet vs onion -->
+      <script is:inline>
+      document.addEventListener("DOMContentLoaded", function () {
+        try {
+          const isOnion = location.hostname.endsWith(".onion");
+
+          // Latest release link
+          const releaseLink = document.getElementById("latest-release-link");
+          const releaseText = document.getElementById("latest-release-text");
+          if (releaseLink && releaseText && !isOnion) {
+            releaseLink.href = "https://github.com/AnonChatX/anonchatx-android/releases/latest";
+            releaseText.textContent = "Go to GitHub latest release";
+          }
+
+          // Explore code link
+          const exploreLink = document.getElementById("explore-code-link");
+          const exploreText = document.getElementById("explore-code-text");
+          if (exploreLink && exploreText && !isOnion) {
+            exploreLink.href = "https://github.com/AnonChatX/anonchatx-android";
+            exploreText.textContent = "Explore the code on GitHub";
+          }
+
+          // Contribute link
+          const contributeLink = document.getElementById("contribute-link");
+          const contributeText = document.getElementById("contribute-text");
+          if (contributeLink && contributeText && !isOnion) {
+            contributeLink.href = "https://github.com/AnonChatX/anonchatx-android";
+            contributeText.textContent = "Contribute on GitHub";
+          }
+        } catch (e) {
+          // fail silently
+        }
+      });
+      </script>
+
       <div class="mt-8 flex flex-wrap items-center gap-6">
         <a
-          href="https://github.com/AnonChatX/anonchatx-android"
+          id="contribute-link"
+          href="http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX/anonchatx-android"
           target="_blank"
           rel="noreferrer"
           class="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 hover:text-white"
         >
-          Contribute on GitHub or the Onion repo<span aria-hidden="true">→</span>
+          <span id="contribute-text">Contribute in our repo (onion)</span><span aria-hidden="true">→</span>
         </a>
 
         <a
