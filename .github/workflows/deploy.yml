@@ -50,3 +50,16 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Mirror to Codeberg
+        run: |
+          git remote add codeberg https://${{ secrets.CODEBERG_TOKEN }}@codeberg.org/AnonChatX/anonchatx.github.io.git
+          git push --mirror codeberg
