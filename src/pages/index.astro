@@ -749,16 +749,31 @@ const COMMIT_URL = BUILD_SHA ? `${REPO_URL}/commit/${BUILD_SHA}` : REPO_URL;
         </p>
       </div>
 
-      <div class="mt-8">
+      <div class="mt-8 space-y-3">
+        <!-- Onion repo (always onion) -->
         <a
-          id="explore-code-link"
           href="http://yexg75vnfxe2q6yygn7csmqdx5mtwmvhrqpboopisvjqz7haras3skid.onion/AnonChatX"
           target="_blank"
           rel="noreferrer"
           class="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 hover:text-white"
         >
-          <span id="explore-code-text">Explore the code in our repo (onion)</span> <span aria-hidden="true">→</span>
+          <span>Explore the code in our repo (onion)</span>
+          <span aria-hidden="true">→</span>
         </a>
+
+        <!-- Tor Browser hint -->
+        <p class="max-w-3xl text-sm text-zinc-500">
+          Onion links require Tor Browser.
+          <a
+            href="https://www.torproject.org/download/"
+            target="_blank"
+            rel="noreferrer"
+            class="ml-1 text-zinc-300 hover:text-white underline underline-offset-4"
+          >
+            Download Tor Browser
+          </a>
+          to access .onion services.
+        </p>
       </div>
     </section>
 
