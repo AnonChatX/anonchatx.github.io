@@ -1,4 +1,4 @@
-Contact: mailto:anonchatsec@protonmail.com
+Contact: mailto:hello@anonomi.org
 Preferred-Languages: en
-Policy: https://anonchatx.org/security
+Policy: https://anonomi.org/security
 Expires: 2027-01-01

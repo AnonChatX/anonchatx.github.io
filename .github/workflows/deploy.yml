@@ -58,8 +58,3 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Mirror to Codeberg
-        run: |
-          git remote add codeberg https://${{ secrets.CODEBERG_TOKEN }}@codeberg.org/AnonChatX/anonchatx.github.io.git
-          git push --mirror codeberg
